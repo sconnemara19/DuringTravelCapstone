@@ -1,0 +1,106 @@
+﻿@model During_Travel2.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hotel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hotel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofArrival)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofArrival)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofDeparture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofDeparture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LengthOfStay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LengthOfStay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfRepresentative)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfRepresentative)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoursAtTheHotel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoursAtTheHotel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyProperty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyProperty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Confirmation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Confirmation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

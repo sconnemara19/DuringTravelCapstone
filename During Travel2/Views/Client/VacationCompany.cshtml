@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "VacationCompany";
+}
+
+<h2>Vacation  Company</h2>>
+@Html.DropDownList("Vacation Company", new List<SelectListItem>()
+{
+    new SelectListItem(){ Text= "Funjet Vacations", Value = "1"},
+    new SelectListItem(){ Text= "Southwest Vacations", Value = "2"},
+    new SelectListItem(){ Text= "United Vacations", Value = "3"},
+
+}, "Choose a company")
+

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Destinations";
+}
+
+<h2>Destinations </h2>
+@Html.DropDownList("Destinations",  new List<SelectListItem>()
+{
+    new SelectListItem(){ Text= "Cancun, Mexico", Value = "1"},
+    new SelectListItem(){ Text= "Punta Cana, Dominican Republic" , Value = "2"},
+    new SelectListItem(){ Text= "Montego Bay, Jamaica", Value = "3"},
+
+}, "Select a destination")
+     
+
