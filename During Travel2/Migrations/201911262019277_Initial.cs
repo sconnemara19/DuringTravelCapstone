@@ -3,7 +3,7 @@ namespace During_Travel2.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class intialMigration : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -11,20 +11,10 @@ namespace During_Travel2.Migrations
                 "dbo.Clients",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        Firstname = c.String(),
-                        Lastname = c.String(),
-                        Hotel = c.String(),
-                        RoomCategory = c.String(),
-                        DateofArrival = c.DateTime(),
-                        DateofDeparture = c.DateTime(),
-                        LengthOfStay = c.Int(nullable: false),
-                        NameOfRepresentative = c.String(),
-                        HoursAtTheHotel = c.Int(nullable: false),
-                        MyProperty = c.Int(nullable: false),
-                        PickupTime = c.String(),
+                        ClientId = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.ClientId);
             
             CreateTable(
                 "dbo.AspNetRoles",

@@ -1,9 +1,14 @@
 ﻿using During_Travel2.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace During_Travel2.Controllers
 {
@@ -25,9 +30,10 @@ namespace During_Travel2.Controllers
 
         public ActionResult Details(int id)
         {
-            Client client = context.Clients.Where(c => c.Id == id).FirstOrDefault();
+            Client client = context.Clients.Where(c => c.ClientId == id).FirstOrDefault();
             return View(client);
-
+            
+            
         }
         // GET: CarOwner/Create
         public ActionResult Create()
@@ -54,14 +60,39 @@ namespace During_Travel2.Controllers
             }
       
         }
-        public ActionResult StaticBind()
-        {
+        //public ActionResult StaticBind()
+        //{
 
-            return View();
-        }
-        public ActionResult VacationCompany()
+        //    return View();
+        //}
+        //public ActionResult VacationCompany()
+        //{
+        //    return View();
+        //}
+
+        string Baseurl = "https://localhost:44335/";
+        public async Task<ActionResult> Index2()
         {
-            return View();
+            List<Client> clientInfo = new List<Client>();
+
+            using(var clients = new HttpClient())
+            {
+                clients.BaseAddress = new Uri(Baseurl);
+
+                clients.DefaultRequestHeaders.Clear();
+
+                clients.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage Res = await clients.GetAsync("api/Clients");
+
+                if (Res.IsSuccessStatusCode)
+                {
+                    var clientResponse = Res.Content.ReadAsStringAsync().Result;
+
+                    clientInfo = JsonConvert.DeserializeObject<List<Client>>
+                        (clientResponse);
+                }
+                return View(clientInfo);
+            }
         }
 
 

@@ -49,12 +49,21 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -167,24 +176,28 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookingAgencyController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TravelDocsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911211523405_intialMigration.cs" />
-    <Compile Include="Migrations\201911211523405_intialMigration.Designer.cs">
-      <DependentUpon>201911211523405_intialMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201911262019277_Initial.cs" />
+    <Compile Include="Migrations\201911262019277_Initial.Designer.cs">
+      <DependentUpon>201911262019277_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911211635086_secondmigration.cs" />
-    <Compile Include="Migrations\201911211635086_secondmigration.Designer.cs">
-      <DependentUpon>201911211635086_secondmigration.cs</DependentUpon>
+    <Compile Include="Migrations\201911262327308_adding controllers.cs" />
+    <Compile Include="Migrations\201911262327308_adding controllers.Designer.cs">
+      <DependentUpon>201911262327308_adding controllers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911211928034_thirdmigration.cs" />
-    <Compile Include="Migrations\201911211928034_thirdmigration.Designer.cs">
-      <DependentUpon>201911211928034_thirdmigration.cs</DependentUpon>
+    <Compile Include="Migrations\201911270046587_morecontrollers.cs" />
+    <Compile Include="Migrations\201911270046587_morecontrollers.Designer.cs">
+      <DependentUpon>201911270046587_morecontrollers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -255,9 +268,12 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Client\Create.cshtml" />
     <Content Include="Views\Client\Details.cshtml" />
-    <Content Include="Views\Client\Index.cshtml" />
     <Content Include="Views\Client\StaticBind.cshtml" />
     <Content Include="Views\Client\VacationCompany.cshtml" />
+    <Content Include="Views\Client\Index2.cshtml" />
+    <Content Include="Views\BookingAgency\Index2.cshtml" />
+    <Content Include="Views\Destinations\Index.cshtml" />
+    <Content Include="Views\TravelDocs\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -276,14 +292,17 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911211523405_intialMigration.resx">
-      <DependentUpon>201911211523405_intialMigration.cs</DependentUpon>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911262019277_Initial.resx">
+      <DependentUpon>201911262019277_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911211635086_secondmigration.resx">
-      <DependentUpon>201911211635086_secondmigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911262327308_adding controllers.resx">
+      <DependentUpon>201911262327308_adding controllers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911211928034_thirdmigration.resx">
-      <DependentUpon>201911211928034_thirdmigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911270046587_morecontrollers.resx">
+      <DependentUpon>201911270046587_morecontrollers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

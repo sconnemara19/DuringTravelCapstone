@@ -1,0 +1,87 @@
+﻿@model IEnumerable<During_Travel2.Models.TravelDocs>
+
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hotel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nameOfRep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.repHoursAtHotel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfArrival)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfDeparture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.returnFlightInfo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Confirmation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeofPickUp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hotel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nameOfRep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.repHoursAtHotel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfArrival)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfDeparture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.returnFlightInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Confirmation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeofPickUp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TraveldocsId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TraveldocsId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TraveldocsId })
+        </td>
+    </tr>
+}
+
+</table>

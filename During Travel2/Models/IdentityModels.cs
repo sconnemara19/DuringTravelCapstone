@@ -31,5 +31,11 @@ namespace During_Travel2.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<During_Travel2.Models.BookingAgency> BookingAgencies { get; set; }
+
+        public System.Data.Entity.DbSet<During_Travel2.Models.Destinations> Destinations { get; set; }
+
+        public System.Data.Entity.DbSet<During_Travel2.Models.TravelDocs> TravelDocs { get; set; }
     }
 }

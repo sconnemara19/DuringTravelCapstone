@@ -43,7 +43,7 @@ namespace During_Travel2.Models
         public string Confirmation { get; set; }
 
         [Display(Name = "Time of pick up ")]
-        public string TimeofPickUp { get; set; }
+        public string TimeofPickUp   { get; set; }
 
 
 

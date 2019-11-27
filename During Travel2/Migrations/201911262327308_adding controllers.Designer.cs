@@ -7,13 +7,13 @@ namespace During_Travel2.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class thirdmigration : IMigrationMetadata
+    public sealed partial class addingcontrollers : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(thirdmigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addingcontrollers));
         
         string IMigrationMetadata.Id
         {
-            get { return "201911211928034_thirdmigration"; }
+            get { return "201911262327308_adding controllers"; }
         }
         
         string IMigrationMetadata.Source
