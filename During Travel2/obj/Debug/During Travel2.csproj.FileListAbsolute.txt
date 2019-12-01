@@ -220,3 +220,9 @@ C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\bin\Sys
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\bin\System.Web.Http.WebHost.xml
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.addingcontrollers.resources
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.morecontrollers.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.foriegnkey.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.vacationid.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.vacationid1.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.addingdatabase.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.tookoutdatabase.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.addingdatabase1.resources

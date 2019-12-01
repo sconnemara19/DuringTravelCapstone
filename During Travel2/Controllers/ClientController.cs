@@ -15,10 +15,15 @@ namespace During_Travel2.Controllers
     public class ClientController : Controller
     {
         ApplicationDbContext context;
+        ApiDbContext Api;
+        
+       
 
         public ClientController()
         {
             context = new ApplicationDbContext();
+            Api = new ApiDbContext();
+            
         }
         
         // GET: Client
@@ -52,6 +57,7 @@ namespace During_Travel2.Controllers
                 // TODO: Add insert logic here
                 context.Clients.Add(client);
                 context.SaveChanges();
+
                 return RedirectToAction("StaticBind");
             }
             catch
@@ -90,9 +96,38 @@ namespace During_Travel2.Controllers
 
                     clientInfo = JsonConvert.DeserializeObject<List<Client>>
                         (clientResponse);
+
+                    
                 }
+             
+
+
+
+
+
+
+
                 return View(clientInfo);
             }
+        }
+
+        public ActionResult ClientTravelDocs(int id)
+        {
+            Clienttravelviewmodel clienttravelview = new Clienttravelviewmodel { Clientlist = new List<Client>(), TravelDocs = new TravelDocs() };
+            TravelDocs travelDocs = Api.TravelDocs.Where(t => t.TraveldocsId == id).FirstOrDefault();
+            List<Vacation> vacations = context.Vacations.Where(v => v.TraveldocsId == travelDocs.TraveldocsId).ToList();
+            List<Client> clients = new List<Client>();
+            foreach (Vacation model in vacations)
+            {
+                var client = Api.Clients.Where(c => c.ClientId == model.ClientId).FirstOrDefault();
+                clients.Add(client);
+
+            }
+            foreach (Client model in clients)
+            {
+                clienttravelview.Clientlist.Add(model);
+            }
+            return View(clienttravelview);
         }
 
 

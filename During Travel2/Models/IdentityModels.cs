@@ -21,16 +21,21 @@ namespace During_Travel2.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Vacation> Vacations { get; set; }
+        
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
+       
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+
         }
+        
 
         public System.Data.Entity.DbSet<During_Travel2.Models.BookingAgency> BookingAgencies { get; set; }
 
@@ -38,4 +43,33 @@ namespace During_Travel2.Models
 
         public System.Data.Entity.DbSet<During_Travel2.Models.TravelDocs> TravelDocs { get; set; }
     }
+    
+    public class ApiDbContext: DbContext
+    {
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<Vacation> Vacations { get; set; }
+
+
+        public ApiDbContext()
+           : base("DefaultConnection")
+        {
+        }
+
+        public static ApiDbContext Create()
+        {
+            return new ApiDbContext();
+
+        }
+
+        public System.Data.Entity.DbSet<During_Travel2.Models.BookingAgency> BookingAgencies { get; set; }
+
+        public System.Data.Entity.DbSet<During_Travel2.Models.Destinations> Destinations { get; set; }
+
+        public System.Data.Entity.DbSet<During_Travel2.Models.TravelDocs> TravelDocs { get; set; }
+
+
+
+    }
+
+    
 }

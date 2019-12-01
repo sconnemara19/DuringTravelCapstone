@@ -199,14 +199,40 @@
     <Compile Include="Migrations\201911270046587_morecontrollers.Designer.cs">
       <DependentUpon>201911270046587_morecontrollers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911272012096_foriegnkey.cs" />
+    <Compile Include="Migrations\201911272012096_foriegnkey.Designer.cs">
+      <DependentUpon>201911272012096_foriegnkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911272058164_vacationid.cs" />
+    <Compile Include="Migrations\201911272058164_vacationid.Designer.cs">
+      <DependentUpon>201911272058164_vacationid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911272116488_vacationid1.cs" />
+    <Compile Include="Migrations\201911272116488_vacationid1.Designer.cs">
+      <DependentUpon>201911272116488_vacationid1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911302139341_addingdatabase.cs" />
+    <Compile Include="Migrations\201911302139341_addingdatabase.Designer.cs">
+      <DependentUpon>201911302139341_addingdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911302151341_tookoutdatabase.cs" />
+    <Compile Include="Migrations\201911302151341_tookoutdatabase.Designer.cs">
+      <DependentUpon>201911302151341_tookoutdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912010009520_addingdatabase1.cs" />
+    <Compile Include="Migrations\201912010009520_addingdatabase1.Designer.cs">
+      <DependentUpon>201912010009520_addingdatabase1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookingAgency.cs" />
     <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Clienttravelviewmodel.cs" />
     <Compile Include="Models\Destinations.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\TravelDocs.cs" />
+    <Compile Include="Models\Vacation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -274,6 +300,7 @@
     <Content Include="Views\BookingAgency\Index2.cshtml" />
     <Content Include="Views\Destinations\Index.cshtml" />
     <Content Include="Views\TravelDocs\Index2.cshtml" />
+    <Content Include="Views\Client\ClientTravelDocs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -303,6 +330,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911270046587_morecontrollers.resx">
       <DependentUpon>201911270046587_morecontrollers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911272012096_foriegnkey.resx">
+      <DependentUpon>201911272012096_foriegnkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911272058164_vacationid.resx">
+      <DependentUpon>201911272058164_vacationid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911272116488_vacationid1.resx">
+      <DependentUpon>201911272116488_vacationid1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911302139341_addingdatabase.resx">
+      <DependentUpon>201911302139341_addingdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911302151341_tookoutdatabase.resx">
+      <DependentUpon>201911302151341_tookoutdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912010009520_addingdatabase1.resx">
+      <DependentUpon>201912010009520_addingdatabase1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
