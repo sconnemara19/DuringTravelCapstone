@@ -106,7 +106,6 @@ C:\Users\simon\Desktop\Visual Studio\During Travel2\During Travel2\obj\Debug\Dur
 C:\Users\simon\Desktop\Visual Studio\During Travel2\During Travel2\obj\Debug\During Travel2.csproj.GenerateResource.cache
 C:\Users\simon\Desktop\Visual Studio\During Travel2\During Travel2\obj\Debug\During_Travel2.Migrations.secondmigration.resources
 C:\Users\simon\Desktop\Visual Studio\During Travel2\During Travel2\obj\Debug\During_Travel2.Migrations.thirdmigration.resources
-C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During Travel2.csprojAssemblyReference.cache
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During Travel2.dll
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During Travel2.pdb
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\bin\During Travel2.dll.config
@@ -226,3 +225,6 @@ C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Deb
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.addingdatabase.resources
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.tookoutdatabase.resources
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.addingdatabase1.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.madeanotherAPI.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.database.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During Travel2.csprojAssemblyReference.cache

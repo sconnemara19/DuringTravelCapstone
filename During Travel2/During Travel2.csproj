@@ -223,6 +223,14 @@
     <Compile Include="Migrations\201912010009520_addingdatabase1.Designer.cs">
       <DependentUpon>201912010009520_addingdatabase1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912012124382_madeanotherAPI.cs" />
+    <Compile Include="Migrations\201912012124382_madeanotherAPI.Designer.cs">
+      <DependentUpon>201912012124382_madeanotherAPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912012135434_database.cs" />
+    <Compile Include="Migrations\201912012135434_database.Designer.cs">
+      <DependentUpon>201912012135434_database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookingAgency.cs" />
@@ -237,10 +245,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-cerulean.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\family.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -348,6 +358,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912010009520_addingdatabase1.resx">
       <DependentUpon>201912010009520_addingdatabase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912012124382_madeanotherAPI.resx">
+      <DependentUpon>201912012124382_madeanotherAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912012135434_database.resx">
+      <DependentUpon>201912012135434_database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

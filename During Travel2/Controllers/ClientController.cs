@@ -115,7 +115,7 @@ namespace During_Travel2.Controllers
         {
             Clienttravelviewmodel clienttravelview = new Clienttravelviewmodel { Clientlist = new List<Client>(), TravelDocs = new TravelDocs() };
             TravelDocs travelDocs = Api.TravelDocs.Where(t => t.TraveldocsId == id).FirstOrDefault();
-            List<Vacation> vacations = context.Vacations.Where(v => v.TraveldocsId == travelDocs.TraveldocsId).ToList();
+            List<Vacation> vacations = Api.Vacations.Where(v => v.TraveldocsId == travelDocs.TraveldocsId).ToList();
             List<Client> clients = new List<Client>();
             foreach (Vacation model in vacations)
             {

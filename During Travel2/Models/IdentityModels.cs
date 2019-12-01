@@ -51,7 +51,7 @@ namespace During_Travel2.Models
 
 
         public ApiDbContext()
-           : base("DefaultConnection")
+           : base("DuringTravelAPIContext")
         {
         }
 
