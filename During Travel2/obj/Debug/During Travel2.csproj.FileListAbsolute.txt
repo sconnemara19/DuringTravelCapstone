@@ -228,3 +228,4 @@ C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Deb
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.madeanotherAPI.resources
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.database.resources
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During Travel2.csprojAssemblyReference.cache
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.fixingapi.resources

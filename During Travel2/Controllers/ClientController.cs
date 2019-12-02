@@ -126,6 +126,8 @@ namespace During_Travel2.Controllers
             foreach (Client model in clients)
             {
                 clienttravelview.Clientlist.Add(model);
+                
+
             }
             return View(clienttravelview);
         }
