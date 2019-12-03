@@ -235,6 +235,10 @@
     <Compile Include="Migrations\201912021422289_fixingapi.Designer.cs">
       <DependentUpon>201912021422289_fixingapi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912022132535_updatingdatabase.cs" />
+    <Compile Include="Migrations\201912022132535_updatingdatabase.Designer.cs">
+      <DependentUpon>201912022132535_updatingdatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookingAgency.cs" />
@@ -371,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912021422289_fixingapi.resx">
       <DependentUpon>201912021422289_fixingapi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912022132535_updatingdatabase.resx">
+      <DependentUpon>201912022132535_updatingdatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

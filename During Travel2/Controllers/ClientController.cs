@@ -106,30 +106,53 @@ namespace During_Travel2.Controllers
 
 
 
-
+                 
                 return View(clientInfo);
             }
         }
 
         public ActionResult ClientTravelDocs(int id)
         {
-            Clienttravelviewmodel clienttravelview = new Clienttravelviewmodel { Clientlist = new List<Client>(), TravelDocs = new TravelDocs() };
-            TravelDocs travelDocs = Api.TravelDocs.Where(t => t.TraveldocsId == id).FirstOrDefault();
-            List<Vacation> vacations = Api.Vacations.Where(v => v.TraveldocsId == travelDocs.TraveldocsId).ToList();
-            List<Client> clients = new List<Client>();
-            foreach (Vacation model in vacations)
-            {
-                var client = Api.Clients.Where(c => c.ClientId == model.ClientId).FirstOrDefault();
-                clients.Add(client);
+            Clienttravelviewmodel cvm = new Clienttravelviewmodel();
+            
 
-            }
-            foreach (Client model in clients)
-            {
-                clienttravelview.Clientlist.Add(model);
+
+             List<Vacation> vacations = Api.Vacations.Include("Client").Include("TravelDocs").Where(q => q.ClientId == id).ToList();
+            //Clienttravelviewmodel clienttravelview = new Clienttravelviewmodel { Clientlist = new List<Client>(), TravelDocs = new TravelDocs() };
+            //TravelDocs travelDocs = Api.TravelDocs.Where(t => t.TraveldocsId == id).FirstOrDefault();
+            //List<Vacation> vacations = Api.Vacations.Where(v => v.TraveldocsId == travelDocs.TraveldocsId).ToList();
+            //List<Client> clients = new List<Client>();
+            cvm.vacations = vacations;
+            
+            //foreach (Vacation model in vacations)
+            //{
+            //    var client = Api.Clients.Where(c => c.ClientId == model.ClientId).FirstOrDefault();
+            //    clients.Add(client);
+
+            //    var travel = Api.TravelDocs.Where(t => t.TraveldocsId == model.TraveldocsId).FirstOrDefault()
                 
 
-            }
-            return View(clienttravelview);
+            //}
+            //foreach (Client model in clients)
+            //{
+            //    clienttravelview.Clientlist.Add(model);
+                
+
+                
+
+            //}
+            //foreach (TravelDocs model in travelDocs)
+            //{
+            //    clienttravelview.TravelDocs(model);
+
+
+
+
+            //}
+
+
+
+            return View(vacations);
         }
 
 

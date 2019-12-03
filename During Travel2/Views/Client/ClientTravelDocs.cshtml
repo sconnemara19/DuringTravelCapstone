@@ -14,16 +14,45 @@
                 @Html.DisplayNameFor(model => model.SportsList[0].sportName)
             </td>
         </tr>*@
-    
-        @for (int i = 0; i < Model.Clientlist.Count; i++)
-        {
-            <td>
-                @Html.DisplayFor(model => model.Clientlist[i].Name)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.TravelDocs.Hotel)
-            </td>
-        }
+
+    @for (int i = 0; i < Model.vacations.Count; i++)
+    {
+        <td>
+            @Html.DisplayFor(model => model.vacations[i].ClientId)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.Hotel)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.RoomCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.Stay)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.nameOfRep)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.repHoursAtHotel)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.DateOfArrival)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.DateOfDeparture)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.returnFlightInfo)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.TimeofPickUp)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.TravelDocs.Confirmation)
+        </td>
+
+    }
+    /**/
     </tr>
 </table>
 
