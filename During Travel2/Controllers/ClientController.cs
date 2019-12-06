@@ -29,13 +29,13 @@ namespace During_Travel2.Controllers
         // GET: Client
         public ActionResult Index()
         {
-            List<Client> clients = context.Clients.ToList();
+            List<Client> clients = Api.Clients.ToList();
             return View(clients);
         }
 
         public ActionResult Details(int id)
         {
-            Client client = context.Clients.Where(c => c.ClientId == id).FirstOrDefault();
+            Client client = Api.Clients.Where(c => c.ClientId == id).FirstOrDefault();
             return View(client);
             
             
@@ -76,53 +76,21 @@ namespace During_Travel2.Controllers
         //    return View();
         //}
 
-        string Baseurl = "https://localhost:44335/";
-        public async Task<ActionResult> Index2()
-        {
-            List<Client> clientInfo = new List<Client>();
-
-            using(var clients = new HttpClient())
-            {
-                clients.BaseAddress = new Uri(Baseurl);
-
-                clients.DefaultRequestHeaders.Clear();
-
-                clients.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage Res = await clients.GetAsync("api/Clients");
-
-                if (Res.IsSuccessStatusCode)
-                {
-                    var clientResponse = Res.Content.ReadAsStringAsync().Result;
-
-                    clientInfo = JsonConvert.DeserializeObject<List<Client>>
-                        (clientResponse);
-
-                    
-                }
-             
-
-
-
-
-
-
-                 
-                return View(clientInfo);
-            }
-        }
 
         public ActionResult ClientTravelDocs(int id)
         {
-            Clienttravelviewmodel cvm = new Clienttravelviewmodel();
+            Clienttravelviewmodel ctvm = new Clienttravelviewmodel();
+
+
+            List<Vacation> vacations = Api.Vacations.Include("Client").Include("TravelDocs").Where(q => q.ClientId == id).ToList();
+            ctvm.vacations = vacations;
             
-
-
-             List<Vacation> vacations = Api.Vacations.Include("Client").Include("TravelDocs").Where(q => q.ClientId == id).ToList();
             //Clienttravelviewmodel clienttravelview = new Clienttravelviewmodel { Clientlist = new List<Client>(), TravelDocs = new TravelDocs() };
             //TravelDocs travelDocs = Api.TravelDocs.Where(t => t.TraveldocsId == id).FirstOrDefault();
             //List<Vacation> vacations = Api.Vacations.Where(v => v.TraveldocsId == travelDocs.TraveldocsId).ToList();
             //List<Client> clients = new List<Client>();
-            cvm.vacations = vacations;
+              
+           
             
             //foreach (Vacation model in vacations)
             //{
@@ -152,10 +120,10 @@ namespace During_Travel2.Controllers
 
 
 
-            return View(vacations);
+            return View ("ClientTravelDocs", vacations);
         }
 
-
+        
 
     }
 }

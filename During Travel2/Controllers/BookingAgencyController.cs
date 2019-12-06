@@ -19,7 +19,7 @@ namespace During_Travel2.Controllers
             return View();
         }
 
-        string Baseurl = "https://localhost:44335/";
+        string Baseurl = "https://localhost:44333/";
         public async Task<ActionResult> Index2()
         {
             List<BookingAgency> AgencyInfo = new List<BookingAgency>();
