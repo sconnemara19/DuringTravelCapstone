@@ -13,7 +13,7 @@ namespace During_Travel2.Controllers
 {
     public class DestinationsController : Controller
     {
-        string Baseurl = "https://localhost:44335/";
+        string Baseurl = "https://localhost:44333/";
         public async Task<ActionResult> Index()
         {
             List<Destinations> destInfo = new List<Destinations>();
