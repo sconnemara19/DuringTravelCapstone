@@ -231,3 +231,4 @@ C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Deb
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.fixingapi.resources
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.updatingdatabase.resources
 C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.addingseededinfo.resources
+C:\Users\simon\Desktop\Visual Studio\DuringTravelCapstone\During Travel2\obj\Debug\During_Travel2.Migrations.changeddatabase.resources

@@ -14,5 +14,7 @@ namespace During_Travel2.Models
         [Display (Name = " Destination Name")]
         public string destinationName { get; set; }
 
+      
+
     }
 }

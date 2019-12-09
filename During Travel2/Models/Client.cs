@@ -15,7 +15,10 @@ namespace During_Travel2.Models
         [Display(Name = "Name")]
         public string Name { get; set; }
 
-        
+        [Display(Name = "Confirmation Number")]
+        public string Confirmation { get; set; }
+
+
 
 
     }

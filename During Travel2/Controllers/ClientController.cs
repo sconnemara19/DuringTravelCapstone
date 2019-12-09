@@ -58,6 +58,8 @@ namespace During_Travel2.Controllers
                 context.Clients.Add(client);
                 context.SaveChanges();
 
+                
+
                 return RedirectToAction("StaticBind");
             }
             catch
@@ -66,11 +68,31 @@ namespace During_Travel2.Controllers
             }
       
         }
-        //public ActionResult StaticBind()
-        //{
+        public ActionResult StaticBind()
+        {
 
-        //    return View();
-        //}
+            return View();
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult StaticBind(string example)
+        {
+            switch (example)
+            {
+                case "Cancun, Mexico":
+                     Response.Redirect("VacationCompany");
+                    break;
+                case "Punta Cana, Dominican Republic":
+                    Response.Redirect("VacationCompany");
+                    break;
+                case "Montego Bay, Jamaica":
+                    Response.Redirect("VacationCompany");
+                    break;
+            }
+            return View("Index");
+        }
+
+
         //public ActionResult VacationCompany()
         //{
         //    return View();

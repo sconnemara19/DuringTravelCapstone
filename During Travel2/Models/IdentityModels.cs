@@ -20,6 +20,7 @@ namespace During_Travel2.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
         public DbSet<Client> Clients { get; set; }
         public DbSet<Vacation> Vacations { get; set; }
         

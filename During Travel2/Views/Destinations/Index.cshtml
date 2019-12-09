@@ -1,14 +1,13 @@
 ﻿@model IEnumerable<During_Travel2.Models.Destinations>
 
 @{
+<a href="~/Views/Destinations/Index.cshtml">~/Views/Destinations/Index.cshtml</a>
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Destinations</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -23,11 +22,12 @@
             @Html.DisplayFor(modelItem => item.destinationName)
         </td>
         <td>
-            @Html.ActionLink("Learnmore", "Edit", new { id=item.DestinationId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DestinationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DestinationId })
+            <a href="https://www.visitmexico.com/en/main-destinations/quintana-roo/cancun">Learn More About Cancun</a>
+            
         </td>
     </tr>
 }
 
 </table>
+
+<

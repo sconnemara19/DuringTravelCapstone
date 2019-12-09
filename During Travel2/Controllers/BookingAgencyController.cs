@@ -32,7 +32,7 @@ namespace During_Travel2.Controllers
 
                 agency.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage Res = await agency.GetAsync("api/BookingAgents");
+                HttpResponseMessage Res = await agency.GetAsync("api/BookingAgencies");
 
                 if (Res.IsSuccessStatusCode)
                 {
