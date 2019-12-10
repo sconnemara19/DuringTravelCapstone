@@ -93,10 +93,10 @@ namespace During_Travel2.Controllers
         }
 
 
-        //public ActionResult VacationCompany()
-        //{
-        //    return View();
-        //}
+        public ActionResult VacationCompany()
+        {
+            return View();
+        }
 
 
         public ActionResult ClientTravelDocs(int id)

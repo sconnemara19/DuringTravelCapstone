@@ -24,9 +24,9 @@
         items.Add(new SelectListItem { Text = "Confirmation Number", Value = "1" });
     }
 
-    @using (Html.BeginForm("Go", "Home", FormMethod.Post))
+    @using (Html.BeginForm())
     {
-        @Html.DropDownList("Example", items)
+        @Html.DropDownList("Example", new SelectListItem(),"Make a Selection")
 
         <input type="submit" value="Submit" />
     }
